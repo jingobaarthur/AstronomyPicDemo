@@ -11,7 +11,7 @@ class DetailViewController: BaseViewController {
     
     fileprivate let viewModel = DetailViewModel()
     
-   lazy var scrollView: UIScrollView = {
+    private lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.showsVerticalScrollIndicator = false
         scrollView.showsHorizontalScrollIndicator = false
@@ -25,13 +25,13 @@ class DetailViewController: BaseViewController {
         return scrollView
     }()
     
-    let baseView: UIView = {
+    private let baseView: UIView = {
         let view = UIView()
         view.backgroundColor = .white
         return view
     }()
     
-    let dateLabel: UILabel = {
+    private let dateLabel: UILabel = {
         let label = UILabel()
         label.textColor = .black
         label.textAlignment = .center
@@ -39,13 +39,13 @@ class DetailViewController: BaseViewController {
         return label
     }()
     
-    let imgView: UIImageView = {
+    private let imgView: UIImageView = {
         let imgView = UIImageView()
         imgView.backgroundColor = .lightGray
         return imgView
     }()
     
-    let tLabel: UILabel = {
+    private let tLabel: UILabel = {
         let label = UILabel()
         label.textColor = .black
         label.textAlignment = .center
@@ -53,7 +53,7 @@ class DetailViewController: BaseViewController {
         return label
     }()
     
-    let copyRightLabel: UILabel = {
+    private let copyRightLabel: UILabel = {
         let label = UILabel()
         label.textColor = .black
         label.textAlignment = .center
@@ -61,7 +61,7 @@ class DetailViewController: BaseViewController {
         return label
     }()
     
-    let desLabel: UILabel = {
+    private let desLabel: UILabel = {
         let label = UILabel()
         label.textColor = .black
         label.textAlignment = .center
@@ -118,7 +118,7 @@ class DetailViewController: BaseViewController {
         let vc = DetailViewController()
         vc.viewModel.dateString = data.date
         vc.viewModel.hdUrl = data.hdurl
-        vc.viewModel.t = data.title
+        vc.viewModel.title = data.title
         vc.viewModel.des = data.description
         vc.viewModel.copyRight = data.copyright
         return vc
@@ -128,7 +128,7 @@ extension DetailViewController{
     func config(){
         DispatchQueue.main.async {
             self.dateLabel.text = self.viewModel.dateFormatterString
-            self.tLabel.text = self.viewModel.t
+            self.tLabel.text = self.viewModel.title
             self.copyRightLabel.text = self.viewModel.copyRight
             self.desLabel.text = self.viewModel.des
             self.imgView.loadImage(urlString: self.viewModel.hdUrl, size: CGSize(width: self.imgView.frame.width, height: self.imgView.frame.height))

@@ -29,7 +29,7 @@
 		4DEDDA5925F1549A009DD583 /* DisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEDDA5825F1549A009DD583 /* DisplayViewController.swift */; };
 		4DEDDA5D25F154B4009DD583 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEDDA5C25F154B4009DD583 /* DetailViewController.swift */; };
 		4DEDDA6125F1E57D009DD583 /* DisplayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEDDA6025F1E57D009DD583 /* DisplayCollectionViewCell.swift */; };
-		4DEDDA6625F1E988009DD583 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEDDA6525F1E988009DD583 /* Navigator.swift */; };
+		4DEDDA6625F1E988009DD583 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEDDA6525F1E988009DD583 /* Coordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,7 +57,7 @@
 		4DEDDA5825F1549A009DD583 /* DisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayViewController.swift; sourceTree = "<group>"; };
 		4DEDDA5C25F154B4009DD583 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		4DEDDA6025F1E57D009DD583 /* DisplayCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayCollectionViewCell.swift; sourceTree = "<group>"; };
-		4DEDDA6525F1E988009DD583 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
+		4DEDDA6525F1E988009DD583 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,7 +193,7 @@
 		4DEDDA6425F1E956009DD583 /* Navigator */ = {
 			isa = PBXGroup;
 			children = (
-				4DEDDA6525F1E988009DD583 /* Navigator.swift */,
+				4DEDDA6525F1E988009DD583 /* Coordinator.swift */,
 			);
 			path = Navigator;
 			sourceTree = "<group>";
@@ -274,7 +274,7 @@
 				4D98453325F3A99A00C6859F /* DetailViewModel.swift in Sources */,
 				4D98452D25F3A04D00C6859F /* Array+extension.swift in Sources */,
 				4DEDDA4825F13595009DD583 /* DataModel.swift in Sources */,
-				4DEDDA6625F1E988009DD583 /* Navigator.swift in Sources */,
+				4DEDDA6625F1E988009DD583 /* Coordinator.swift in Sources */,
 				4DEDDA2625F1327F009DD583 /* MainViewController.swift in Sources */,
 				4DEDDA2225F1327F009DD583 /* AppDelegate.swift in Sources */,
 				4DEDDA3A25F13312009DD583 /* UIView+extension.swift in Sources */,

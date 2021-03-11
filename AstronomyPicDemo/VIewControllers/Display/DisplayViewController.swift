@@ -11,8 +11,8 @@ class DisplayViewController: BaseViewController {
     
     fileprivate let viewModel = DisplayViewModel()
     
-    lazy var collectionView = UICollectionView()
-    var layout = UICollectionViewFlowLayout()
+    private lazy var collectionView = UICollectionView()
+    private var layout = UICollectionViewFlowLayout()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,5 +86,9 @@ extension DisplayViewController: UIScrollViewDelegate{
             print("Pull up to load more")
             viewModel.clipDataArrayToDisplay()
         }
+    }
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        //print("Collection did scroll")
+        //APIManager.sharedInstance.sessionManager.invalidateAndCancel()
     }
 }

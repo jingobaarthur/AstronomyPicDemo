@@ -11,7 +11,7 @@ class MainViewController: BaseViewController {
     
     fileprivate let viewModel = MainViewModel()
     
-    let titleLabel: UILabel = {
+   private let titleLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
         label.font = UIFont.systemFont(ofSize: 25)
@@ -20,7 +20,7 @@ class MainViewController: BaseViewController {
         return label
     }()
     
-    let requestButton: UIButton = {
+    private let requestButton: UIButton = {
         let button = UIButton()
         button.addTarget(self, action: #selector(didTapedRequestButton), for: .touchUpInside)
         button.setTitle("Request", for: .normal)

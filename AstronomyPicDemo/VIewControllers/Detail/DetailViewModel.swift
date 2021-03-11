@@ -10,7 +10,7 @@ class DetailViewModel{
     
     var dateString: String = ""
     var hdUrl: String = ""
-    var t: String = ""
+    var title: String = ""
     var des: String = ""
     var copyRight: String = ""
     var dateFormatterString: String = ""

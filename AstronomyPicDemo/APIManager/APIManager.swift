@@ -51,6 +51,7 @@ class APIManager{
     
     static let sharedInstance = APIManager()
     private init() {}
+    let sessionManager = URLSession.shared
     
     func makeRequest(_ httpRequest: HttpRequest) -> URLRequest{
         let urlEncodeString = httpRequest.urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
@@ -85,7 +86,7 @@ class APIManager{
     }
     
     func taskRequest(_ httpRequest: HttpRequest, completion: @escaping(Result<Data, Error>) -> Void){
-        URLSession.shared.dataTask(with: makeRequest(httpRequest), completionHandler: {  (data, response, error) in
+        sessionManager.dataTask(with: makeRequest(httpRequest), completionHandler: {  (data, response, error) in
             guard error == nil else {
                 return completion(Result.failure(error!))
             }
@@ -98,7 +99,7 @@ class APIManager{
         }).resume()
     }
     func getImageRequest(_ httpRequest: URLRequest, completion: @escaping(Result<Data, Error>) -> Void){
-        URLSession.shared.dataTask(with: httpRequest, completionHandler: {  (data, response, error) in
+        sessionManager.dataTask(with: httpRequest, completionHandler: {  (data, response, error) in
             guard error == nil else {
                 return completion(Result.failure(error!))
             }

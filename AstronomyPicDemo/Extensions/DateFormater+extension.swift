@@ -29,9 +29,12 @@ extension String{
     func formatterDateString(currentFormat: DateFormat, to format: DateFormat) -> String {
         let dateformatter = DateFormatter()
         dateformatter.dateFormat = currentFormat.rawValue
-        let date =  dateformatter.date(from: self)!
-        dateformatter.dateFormat = format.rawValue
-        let dateStr = dateformatter.string(from: date)
-        return dateStr
+        if let date =  dateformatter.date(from: self){
+            dateformatter.dateFormat = format.rawValue
+            let dateStr = dateformatter.string(from: date)
+            return dateStr
+        }else{
+            return self
+        }
     }
 }

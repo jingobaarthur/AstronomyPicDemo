@@ -8,17 +8,17 @@
 import UIKit
 
 protocol Navigatable {
-    var navigator: Navigator { get }
+    var navigator: Coordinator { get }
 }
 
 extension Navigatable {
-    var navigator: Navigator {
-        return Navigator.sharedInstance
+    var navigator: Coordinator {
+        return Coordinator.sharedInstance
     }
 }
 
-class Navigator{
-    static let sharedInstance = Navigator()
+class Coordinator{
+    static let sharedInstance = Coordinator()
     private init() {}
     
     enum Destination{
